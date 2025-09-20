@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="encabezado">Esta es una simple calculadora con historial.</div>
+    <div class="cuerpo">
+        <p>Mi nombre es Manuel José Mella Montalvo.</p>
+    </div>
+
+
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+            <button class="operator" onclick="appendOperator('*')">*</button>
+            <button class="delete" onclick="deleteLast()">DEL</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="equals" onclick="calculateResult()">=</button>
+
+            <button class="zero" onclick="appendNumber('0')">0</button>
+            <button onclick="appendNumber('.')">.</button>
+        </div>
+    </div>
+    
+    <div class="history-container">
+    <h2>Historial de Cálculos</h2>
+    <ul id="history-list"></ul>
+    <button class="glow-on-hover" onclick="clearHistory()">Limpiar Historial</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
